@@ -1,7 +1,11 @@
 package main
 
-import "chat-serv/handlers"
+import (
+    "chat-serv/http-handlers"
+    "chat-serv/handlers"
+)
 
 func main(){
-    handlers.Server()
+    go handlers.Server()
+    http_handlers.Start()
 }
